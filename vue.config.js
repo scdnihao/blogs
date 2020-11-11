@@ -1,10 +1,11 @@
 module.exports = {
 	productionSourceMap:false,
 	publicPath: './',
+	lintOnSave: false,
 	  pages: {
 		index: {
 		  // page 的入口
-		  entry: 'src/index/main.js',
+		  entry: 'src/pages/index/main.js',
 		  // 模板来源
 		  template: 'public/index.html',
 		  // 在 dist/index.html 的输出
@@ -17,7 +18,7 @@ module.exports = {
 		  chunks: ['chunk-vendors', 'chunk-common', 'index']
 		},
 		home:{
-			entry: 'src/home/home.js',
+			entry: 'src/pages/home/home.js',
 			template: 'public/home.html',
 			filename: 'home.html',
 			title: ' Home',
