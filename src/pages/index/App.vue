@@ -7,7 +7,12 @@
 				<li><a href="">代码</a></li>
 				<li><a href="">github</a></li>
 				<li><a href="">链路</a></li>
+				<li><a href="">产品</a></li>
 			</ul>
+			<div class="selectbox">
+				<el-input v-model="input" placeholder="请输入内容" @input=clons style="width:300px;line-height:60px;font-size:15px"></el-input>
+				<el-button type="primary" icon="el-icon-search">搜索</el-button>
+			</div>
 		</div>
 	</div>
   </div>
@@ -20,7 +25,17 @@ export default {
   name:'App',
   components: {
   },
-  
+  data() {
+    return {
+      input: ''
+    }
+  },
+  methods:{
+	  clons(){
+		  console.log(this.input);
+	  },
+	 
+  }
 }
 </script>
 
@@ -49,17 +64,19 @@ a{
   height:5000px;
 }
 .bigbox {
-	min-width:1200px;
+	width:100%;
 	background-color: #FFFFFF;
 	border-bottom: 1px solid #999999;
 	box-shadow: 3px 1px 5px #666666;
 	box-sizing: content-box;
+	position: fixed;
 }
 .tabbat{
 	width:1200px;
 	height:60px;
 	margin:0 auto;
 	box-sizing: content-box;
+	display: flex;
 }
 .tabbat ul{
 }
@@ -76,5 +93,8 @@ a{
 	line-height: 60px;
 	font-size: 18px;
 	color:#000000;
+}
+.selectbox{
+	width:500px;
 }
 </style>
