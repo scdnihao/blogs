@@ -13,6 +13,12 @@
 				<el-input v-model="input" placeholder="请输入内容" @input=clons style="width:300px;line-height:60px;font-size:15px"></el-input>
 				<el-button type="primary" icon="el-icon-search">搜索</el-button>
 			</div>
+			<div class="user_login">
+				<div class="user_info">
+					<span>注册/登陆</span>
+					<div class="head_photo"><img src="../../assets/user.png" alt=""></div>
+				</div>
+			</div>
 		</div>
 	</div>
   </div>
@@ -33,6 +39,10 @@ export default {
   methods:{
 	  clons(){
 		  console.log(this.input);
+		  console.log(document.querySelectorAll(".user_login"));
+		  document.querySelectorAll(".user_login").forEach(element => {
+			  console.log(element);
+		  });
 	  },
 	 
   }
@@ -96,5 +106,12 @@ a{
 }
 .selectbox{
 	width:500px;
+}
+.user_info{
+	line-height:60px;
+
+}
+.user_info span{
+	cursor:pointer;
 }
 </style>
