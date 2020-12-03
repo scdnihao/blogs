@@ -10,16 +10,21 @@
 				<li><a href="">产品</a></li>
 			</ul>
 			<div class="selectbox">
-				<el-input v-model="input" placeholder="请输入内容" @input=clons style="width:300px;line-height:60px;font-size:15px"></el-input>
-				<el-button type="primary" icon="el-icon-search">搜索</el-button>
+				<el-input v-model="input" placeholder="请输入内容" @input=clons style="width:300px;line-height:50px;font-size:16px" size="mini"></el-input>
+				<el-button type="primary" icon="el-icon-search" size="mini">搜索</el-button>
 			</div>
 			<div class="user_login">
 				<div class="user_info">
 					<span>注册/登陆</span>
-					<div class="head_photo"><img src="../../assets/user.png" alt=""></div>
+					<img src="../../assets/user.png" alt="">
 				</div>
 			</div>
 		</div>
+	</div>
+	<div class="main_content">
+		<div class="content_left" style="background-color:black"></div>
+		<div class="content_middle" style="background-color:blue"></div>
+		<div class="content_right" style="background-color:red"></div>
 	</div>
   </div>
 </template>
@@ -42,6 +47,7 @@ export default {
 		  console.log(document.querySelectorAll(".user_login"));
 		  document.querySelectorAll(".user_login").forEach(element => {
 			  console.log(element);
+			  event.stopPropagation()
 		  });
 	  },
 	 
@@ -80,10 +86,11 @@ a{
 	box-shadow: 3px 1px 5px #666666;
 	box-sizing: content-box;
 	position: fixed;
+	z-index:20;
 }
 .tabbat{
 	width:1200px;
-	height:60px;
+	height:50px;
 	margin:0 auto;
 	box-sizing: content-box;
 	display: flex;
@@ -93,25 +100,56 @@ a{
 .tabbat ul li {
 	display: inline-block;
 	padding:0 10px;
-	height:60px;
+	height:50px;
 	cursor:pointer;
 }
 .tabbat ul li:hover{
 	background-color:#f5f6f7;
 }
 .tabbat ul li a{
-	line-height: 60px;
-	font-size: 18px;
+	line-height: 50px;
+	font-size: 15px;
 	color:#000000;
 }
 .selectbox{
 	width:500px;
 }
 .user_info{
-	line-height:60px;
-
+	line-height:50px;
+	display: inline;
+	
 }
 .user_info span{
 	cursor:pointer;
+	font-size: 15px;
+}
+.user_info img{
+	position: relative;
+    top: 8px;
+    left: 20px;
+}
+.main_content{
+	height:100%;
+	position: relative;
+	top:70px;
+	min-width: 1420px;
+	margin:0 auto;
+}
+.content_left{
+	height:calc(100vh);
+	width:350px;
+	display: inline-block;
+}
+.content_middle{
+	width:700px;
+	height:100%;
+	display: inline-block;
+	vertical-align: top;
+}
+.content_right{
+	height:calc(100vh + 500px);
+	width:300px;
+	display: inline-block;
+	vertical-align: top;
 }
 </style>
