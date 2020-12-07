@@ -44,10 +44,11 @@ export default {
   methods:{
 	  clons(){
 		  console.log(this.input);
+		//    var cmr = plus.camera.getCamera(); 
+		//    console.log(cmr);
 		  console.log(document.querySelectorAll(".user_login"));
 		  document.querySelectorAll(".user_login").forEach(element => {
 			  console.log(element);
-			  event.stopPropagation()
 		  });
 	  },
 	 
