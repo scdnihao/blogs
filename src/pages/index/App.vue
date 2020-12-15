@@ -48,7 +48,7 @@ export default {
 		//    console.log(cmr);
 		  console.log(document.querySelectorAll(".user_login"));
 		  document.querySelectorAll(".user_login").forEach(element => {
-			  console.log(element);
+		  console.log(element);
 		  });
 	  },
 	 
@@ -95,8 +95,6 @@ a{
 	margin:0 auto;
 	box-sizing: content-box;
 	display: flex;
-}
-.tabbat ul{
 }
 .tabbat ul li {
 	display: inline-block;
