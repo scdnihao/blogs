@@ -23,7 +23,7 @@
 	</div>
 	<div class="main_content">
 		<div class="content_left" style="background-color:black"></div>
-		<div class="content_middle" style="background-color:blue"></div>
+		<div class="content_middle" style="background-color:blue">11111111111</div>
 		<div class="content_right" style="background-color:red"></div>
 	</div>
   </div>
@@ -78,7 +78,8 @@ a{
   text-align: center;
   color: #2c3e50;
   background-color:#f5f6f7;
-  height:5000px;
+  height:100%;
+  padding-bottom:70px;
 }
 .bigbox {
 	width:100%;
@@ -95,6 +96,9 @@ a{
 	margin:0 auto;
 	box-sizing: content-box;
 	display: flex;
+}
+.tabbat ul{
+	margin-left:20px;
 }
 .tabbat ul li {
 	display: inline-block;
@@ -131,17 +135,16 @@ a{
 	height:100%;
 	position: relative;
 	top:70px;
-	min-width: 1420px;
-	margin:0 auto;
+	min-width: 1150px;
 }
 .content_left{
 	height:calc(100vh);
-	width:350px;
+	width:300px;
 	display: inline-block;
+	/* position: fixed; */
 }
 .content_middle{
 	width:700px;
-	height:100%;
 	display: inline-block;
 	vertical-align: top;
 }
@@ -150,5 +153,10 @@ a{
 	width:300px;
 	display: inline-block;
 	vertical-align: top;
+}
+@media screen and (max-width:1350px) {
+	.content_right{
+		display: none;
+	}
 }
 </style>
