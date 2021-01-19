@@ -22,7 +22,24 @@
 		</div>
 	</div>
 	<div class="main_content">
-		<div class="content_left" style="background-color:black"></div>
+		<div class="content_left" style="background-color:white">
+			<div class="user_info_left">
+				<div class="blogs_author">
+					<div class="author_photo">
+						<img src="../../assets/user.png" alt="">
+					</div>
+					<div class="author_info">
+						<div class="author_name">
+							<span id="author_name" v-html=author_name></span>
+							</div>
+						<div class="author_WorkTime"><span id="author_WorkTime">码龄1年</span></div>
+					</div>
+				</div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+		</div>
 		<div class="content_middle" style="background-color:blue">11111111111</div>
 		<div class="content_right" style="background-color:red"></div>
 	</div>
@@ -38,7 +55,8 @@ export default {
   },
   data() {
     return {
-      input: ''
+	  input: '',
+	  author_name:"天边一片云"
     }
   },
   methods:{
@@ -90,6 +108,25 @@ a{
 	position: fixed;
 	z-index:20;
 }
+.user_info_left{
+	height:350px;
+	width:300px;
+}
+.author_photo{
+	height:38px;
+	width:38px;
+	display: inline-block;
+	position: relative;
+	border-radius:50%;
+}
+.author_photo img{
+	height:38px;
+	width:38px;
+}
+.blogs_author{
+	text-align: left;
+	padding:10px 20px 5px 20px;
+}
 .tabbat{
 	width:1200px;
 	height:50px;
@@ -137,6 +174,25 @@ a{
 	top:70px;
 	min-width: 1150px;
 }
+.author_info{
+	margin-left:5px;
+	height:38px;
+	display:inline-block;
+}
+.author_name{
+	font-size: 13px;
+	display: block;
+	margin-bottom:4px;
+	font-family: -apple-system,SF UI Text,Arial,PingFang SC,Hiragino Sans GB,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif;;
+}
+.author_WorkTime{
+	display:block;
+}
+#author_WorkTime{
+	color:#999aaa;
+	font-size:13px;
+}
+/* #999aaa */
 .content_left{
 	height:calc(100vh);
 	width:300px;
