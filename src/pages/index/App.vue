@@ -35,7 +35,15 @@
 						<div class="author_WorkTime"><span id="author_WorkTime">码龄1年</span></div>
 					</div>
 				</div>
-				<div></div>
+				<div class="blogs_author_info">
+					<ul class="blogs_author_info_ul">
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+				</div>
 				<div></div>
 				<div></div>
 			</div>
@@ -85,6 +93,8 @@ ul{
 }
 li{
 	list-style: none;
+	margin:0;
+	padding:0;
 	}
 a{
 	text-decoration: none;
@@ -125,7 +135,7 @@ a{
 }
 .blogs_author{
 	text-align: left;
-	padding:10px 20px 5px 20px;
+	padding:20px 20px 5px 20px;
 }
 .tabbat{
 	width:1200px;
@@ -209,6 +219,21 @@ a{
 	width:300px;
 	display: inline-block;
 	vertical-align: top;
+}
+.blogs_author_info{
+	/* height:60px; */
+	padding:5px 6px;
+}
+.blogs_author_info_ul{
+	height:initial;
+	width:initial;
+	
+}
+.blogs_author_info_ul li{
+	display: inline-block;
+	width: 55px;
+    height: 50px;
+	background-color: #000000;
 }
 @media screen and (max-width:1350px) {
 	.content_right{
