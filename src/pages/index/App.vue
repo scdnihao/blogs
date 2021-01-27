@@ -5,7 +5,7 @@
 			<ul>
 				<li><a href="">首页</a></li>
 				<li><a href="">代码</a></li>
-				<li><a href="">github</a></li>
+				<li><a href="https://github.com/scdnihao/blogs">github</a></li>
 				<li><a href="">链路</a></li>
 				<li><a href="">产品</a></li>
 			</ul>
@@ -37,15 +37,73 @@
 				</div>
 				<div class="blogs_author_info">
 					<ul class="blogs_author_info_ul">
-						<li></li>
-						<li></li>
-						<li></li>
-						<li></li>
-						<li></li>
+						<li>
+							<a href="">
+								<span>25</span>
+								<span>原创</span>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<span>1万+</span>
+								<span>周排名</span>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<span>9999</span>
+								<span>总排名</span>
+							</a>
+						</li>
+						<li>
+								<span>9万+</span>
+								<span style="color:#999aaa">访问</span>
+						</li>
+						<li>
+								<span>25</span>
+								<span style="color:#999aaa">等级</span>
+						</li>
 					</ul>
 				</div>
-				<div></div>
-				<div></div>
+				<div class="transverse_line"></div>
+				<div class="amount_info">
+					<ul>
+						<li>
+							<span>9999</span>
+							<span>积分</span>
+						</li>
+						<li>
+							<span>9999</span>
+							<span>粉丝</span>
+						</li>
+						<li>
+							<span>9999</span>
+							<span>获赞</span>
+						</li>
+						<li>
+							<span>9999</span>
+							<span>评论</span>
+						</li>
+						<li>
+							<span>9999</span>
+							<span>收藏</span>
+						</li>
+					</ul>
+				</div>
+				<div class="badge">
+					<div class="icon_badge" title="签到新秀">
+						<img class="badge_img" src="../../assets/chizhiyiheng@240.png" alt="签到新秀">
+					</div>
+					<div class="icon_badge" title="持之以恒">
+						<img class="badge_img" src="../../assets/qiandao10@240.png" alt="持之以恒">
+					</div>
+					<div class="icon_badge" title="勤写标兵LV4">
+						<img class="badge_img" src="../../assets/qixiebiaobing4@240.png" alt="勤写标兵LV4">
+					</div>
+					<div class="icon_badge" title="原力新人">
+						<img class="badge_img" src="../../assets/yuanli_xinren@240.png" alt="原力新人">
+					</div>
+				</div>
 			</div>
 		</div>
 		<div class="content_middle" style="background-color:blue">11111111111</div>
@@ -64,7 +122,7 @@ export default {
   data() {
     return {
 	  input: '',
-	  author_name:"天边一片云"
+	  author_name:"码云"
     }
   },
   methods:{
@@ -86,6 +144,7 @@ export default {
 body,html{
 	margin:0;
 	padding:0;
+	font-family: -apple-system,SF UI Text,Arial,PingFang SC,Hiragino Sans GB,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif;
 	}
 ul{
 	margin:0;
@@ -119,7 +178,7 @@ a{
 	z-index:20;
 }
 .user_info_left{
-	height:350px;
+	/* height:300px; */
 	width:300px;
 }
 .author_photo{
@@ -222,18 +281,60 @@ a{
 }
 .blogs_author_info{
 	/* height:60px; */
-	padding:5px 6px;
+	padding:10px 6px;
 }
 .blogs_author_info_ul{
-	height:initial;
-	width:initial;
-	
+	display:inline-block;
 }
 .blogs_author_info_ul li{
 	display: inline-block;
 	width: 55px;
     height: 50px;
-	background-color: #000000;
+}
+.blogs_author_info_ul li a{
+	color:#2c3e50;
+}
+.blogs_author_info_ul li:hover a :last-child{
+	color:#fc5531;
+}
+.blogs_author_info_ul li span{
+	display: block;
+	line-height:25px;
+	font-size:14px;
+}
+.transverse_line{
+	height:1px;
+	width:266px;
+	background-color:#f5f6f7;
+	margin:0 auto;
+}
+.amount_info{
+	padding:10px 6px;
+}
+.amount_info ul li{
+	width:55px;
+	height:50px;
+	display: inline-block;
+	font-size: 14px;
+}
+.amount_info ul span{
+	display: block;
+	line-height: 25px;
+}
+.amount_info ul li :last-child{
+	color:#999aaa;
+}
+.badge{
+	text-align: left;
+    padding: 15px 20px;
+}
+.icon_badge{
+	display: inline-block;
+	margin-right:3px;
+}
+.badge_img{
+	width:36px;
+	height:36px;
 }
 @media screen and (max-width:1350px) {
 	.content_right{
